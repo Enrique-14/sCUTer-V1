@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import NetInfo from '@react-native-community/netinfo';
+
 
 
 
@@ -14,6 +14,7 @@ import RecuperacionScreen from './screens/RecuperacionScreen';
 import RegistroScreen from './screens/RegistroScreen';
 import HomeScreen from './screens/HomeScreen'
 import ContadorScreen from './screens/ContadorScreen';
+import CamaraScreen from './screens/CamaraScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -30,6 +31,7 @@ function App() {
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Recuperacion" component={RecuperacionScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
+        <Stack.Screen name="Camara" component={CamaraScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

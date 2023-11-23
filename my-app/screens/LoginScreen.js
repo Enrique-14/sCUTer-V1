@@ -6,7 +6,7 @@ import { validateSignup } from './SignupScreen';
 import RecuperacionScreen from './RecuperacionScreen';
 import { useNavigation } from '@react-navigation/native';
 import RegistroScreen from './RegistroScreen';
-
+import Swal from 'sweetalert2'
 
 
 

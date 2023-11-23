@@ -16,6 +16,10 @@ const CameraScreen = ({ route, navigation }) => {
     }
   };
 
+  const handleRetakePicture = () => {
+    setCapturedImage(null);
+  };
+
   const askForCameraPermission = async () => {
     const { status } = await Camera.requestCameraPermissionsAsync();
     setHasPermission(status === 'granted');
@@ -46,7 +50,6 @@ const CameraScreen = ({ route, navigation }) => {
       </View>
     );
   }
-
   if (capturedImage) {
     return (
       <View style={styles.container}>
@@ -63,6 +66,9 @@ const CameraScreen = ({ route, navigation }) => {
               <Text style={styles.buttonText}>No, gracias</Text>
             </TouchableOpacity>
           </View>
+          <TouchableOpacity style={styles.button} onPress={handleRetakePicture}>
+            <Text style={styles.buttonText}>Volver a tomar foto</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );

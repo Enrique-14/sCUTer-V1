@@ -15,6 +15,7 @@ import RegistroScreen from './screens/RegistroScreen';
 import HomeScreen from './screens/HomeScreen'
 import ContadorScreen from './screens/ContadorScreen';
 import CamaraScreen from './screens/CamaraScreen';
+import ComentariosScreen from './screens/ComentariosScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -32,6 +33,7 @@ function App() {
         <Stack.Screen name="Recuperacion" component={RecuperacionScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Camara" component={CamaraScreen} />
+        <Stack.Screen name='Comentarios' component={ComentariosScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

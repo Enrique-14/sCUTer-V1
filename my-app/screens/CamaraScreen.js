@@ -50,6 +50,7 @@ const CameraScreen = ({ route, navigation }) => {
       </View>
     );
   }
+
   if (capturedImage) {
     return (
       <View style={styles.container}>

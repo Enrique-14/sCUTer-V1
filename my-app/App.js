@@ -33,7 +33,7 @@ function App() {
         <Stack.Screen name="Recuperacion" component={RecuperacionScreen} />
         <Stack.Screen name="Registro" component={RegistroScreen} />
         <Stack.Screen name="Camara" component={CamaraScreen} />
-        <Stack.Screen name='Comentarios' component={ComentariosScreen} />
+        <Stack.Screen name="Comentarios" component={ComentariosScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

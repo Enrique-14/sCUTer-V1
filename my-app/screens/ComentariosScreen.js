@@ -1,31 +1,33 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button, ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-const FeedbackScreen = () => {
+
+const ComentariosScreen = () => {
+  const navigation = useNavigation();
   const [rating, setRating] = useState(0);
   const [comments, setComments] = useState('');
   const [improvementAreas, setImprovementAreas] = useState([
     'Velocidad de la aplicación',
-    'Diseño de la interfaz',
-    'Funcionalidades faltantes',
+    'Diseño',
+    'Funcionalidades',
   ]);
   const [openComment, setOpenComment] = useState('');
 
   const handleRatingChange = (value) => {
-    // Aquí puedes agregar validación adicional si es necesario
     setRating(value);
   };
 
   const handleImprovementToggle = (area) => {
     const updatedAreas = [...improvementAreas];
     const index = updatedAreas.indexOf(area);
-
+  
     if (index === -1) {
       updatedAreas.push(area);
     } else {
       updatedAreas.splice(index, 1);
     }
-
+  
     setImprovementAreas(updatedAreas);
   };
 
@@ -34,11 +36,10 @@ const FeedbackScreen = () => {
   };
 
   const handleSubmit = () => {
-    // Aquí puedes realizar acciones con los comentarios, como enviarlos a un servidor
     console.log('Rating:', rating);
     console.log('Selected Improvement Areas:', improvementAreas);
     console.log('Open Comment:', openComment);
-    // Puedes agregar lógica adicional según tus necesidades
+    navigation.navigate('LoginScreen');
   };
 
   return (
@@ -64,7 +65,13 @@ const FeedbackScreen = () => {
             key={area}
             title={area}
             onPress={() => handleImprovementToggle(area)}
-            color={improvementAreas.includes(area) ? '#2196F3' : '#888'}
+            style={{
+              backgroundColor: improvementAreas.includes(area) ? '#2196F3' : '#888',
+              borderRadius: 8,
+              paddingVertical: 8,
+              paddingHorizontal: 16,
+              margin: 4,
+            }}
           />
         ))}
       </View>
@@ -74,7 +81,7 @@ const FeedbackScreen = () => {
         style={styles.commentInput}
         multiline
         numberOfLines={4}
-        placeholder="Expresa tus comentarios aquí..."
+        placeholder="Tus comentarios aquí..."
         value={openComment}
         onChangeText={handleOpenCommentChange}
       />
@@ -120,4 +127,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FeedbackScreen;
+export default ComentariosScreen;

@@ -1,4 +1,4 @@
-# sCUTer ¡Tu movilidad segura! by Enrique Bravo
+# sCUTer - ¡Tu movilidad segura! by Enrique Bravo
 
 <p>
   <!-- iOS -->
@@ -7,10 +7,12 @@
   <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
 </p>
 
-## 🚀 ¿cómo usar sCUTer?
+## 🚀 ¿Cómo usar sCUTer?
 
-1- > `npx create-react-native-app my-app -t with-reanimated`
+sCUTer es una aplicación de movilidad segura desarrollada con React Native. Sigue estos pasos para comenzar:
 
-- Run `yarn` or `npm install`.
-- Run `yarn start` or `npm run start`.
+### 1. Clonar el Repositorio
 
+```bash
+git clone https://github.com/Enrique-14/sCUTer-V1.git
+cd sCUTer-V1

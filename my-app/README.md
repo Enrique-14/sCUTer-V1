@@ -13,6 +13,26 @@ sCUTer es una aplicación de movilidad segura desarrollada con React Native. Sig
 
 ### 1. Clonar el Repositorio
 
-```bash
+
 git clone https://github.com/Enrique-14/sCUTer-V1.git
 cd sCUTer-V1
+
+### 2. Ejecutar la Aplicación
+
+puedes usar cualquiera de las dos:
+
+# Utiliza yarn
+yarn start
+
+# O utiliza npm
+npm run start
+
+### 3. Expo Go
+
+Asegúrate de tener la aplicación Expo Go instalada en tu dispositivo móvil. 
+Al tener la APP, Escanea el código QR proporcionado por Expo para visualizar la aplicación sCUTer en tu dispositivo.
+
+
+
+
+
